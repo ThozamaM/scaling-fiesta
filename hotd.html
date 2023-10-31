@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House of the Dragon</title>
+    <style>
+      body {
+        background-color: #fffbe3;
+      }
+      h1 {
+        color: #6a425c;
+        text-align: center;
+        font-size: 40px;
+      }
+      h2 {
+        color: #6a425c;
+        text-align: center;
+        border: solid 2px #6a425c;
+        border-radius: 4px;
+        border-left: ;
+        padding: 15px;
+        margin: 2px;
+      }
+      img {
+        width: 600px;
+        height: 530px;
+        padding: 30px;
+        float: left;
+      }
+      p {
+        padding: 30px;
+        line-height: 1.5;
+      }
+      button {
+        border: solid 2px #6a425c;
+        border-radius: 7px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        font-size: 18px;
+        padding: 8px 20px;
+        transition: all 200ms ease;
+        opacity: 1;
+        box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
+        margin: 30px auto;
+      }
+      button:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #6a425c;
+        font-style: italic;
+      }
+      .coded {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #757a79;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>House of the Dragon</h1>
+      <h2>When dragons ruled Westeros 🔥</h2>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/095/291/original/House-of-the-Dragon-Photo-1.jpeg?1693503776"
+      />
+      <p>
+        Set nearly 200 years before the events of <em>Game of Thrones</em>, 172
+        years before the birth of <em>Daenerys Targaryen</em> and about 100
+        years after the Seven Kingdoms are united by the
+        <em>Targaryen Conquest</em>, the series is based on George R.R. Martin's
+        book <em>Fire and Blood</em>.
+        <br />
+        <br />
+        The show portrays the events leading up to the beginning of the decline
+        of House Targaryen, a devastating war of succession known as the "Dance
+        of the Dragons".
+        <br />
+        <br />
+        Old Westerosi houses that are no longer in existence when
+        <em>Game of Thrones</em> takes place, such as:
+        <strong>House Velaryon and House Hightower</strong> are featured in
+        <em>House of the Dragon</em> and viewers will be able to see the role
+        they played in the fall of the greatest dynasty Westeros had ever seen.
+        <br />
+        <br />
+      </p>
+      <hr />
+
+      <p>
+        <a href="https://www.hbo.com/house-of-the-dragon" target="_blank">
+          Watch trailer
+        </a>
+      </p>
+      <button>Rate show</button>
+      <p class="coded">
+        This page was built by <strong><em>Thozama Madonda</em></strong>
+      </p>
+    </div>
+    <script>
+      let name = prompt("What is your name?");
+      let query = prompt("Have you watched Game of Thrones before?");
+      query = query.toLowerCase();
+
+      if (query === "yes") {
+        alert("You might like this page, " + name + "! 🥳");
+      } else {
+        alert("You might need to get on that, " + name + "! 🤭");
+      }
+
+      function rate() {
+        let rating = prompt("What would you rate this show, from 1-10?");
+        if (rating <= 5) {
+          alert("Pity you didn't enjoy it! ☹️");
+        }
+        if (rating >= 6) {
+          alert("I'm glad you liked it! 😁");
+        }
+      }
+      let rateButton = document.querySelector("button");
+      rateButton.addEventListener("click", rate);
+    </script>
+  </body>
+</html>
